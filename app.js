@@ -116,6 +116,10 @@ app.use("/", userRouter);
 //     res.send("Successful testing!");
 // });
 
+app.get("/", (req,res) => {
+    res.redirect("/listings");
+})
+
 app.get('/.well-known/*path' , (req,res) => {
     res.status(204).end();
 });
