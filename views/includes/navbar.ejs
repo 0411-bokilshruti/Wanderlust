@@ -24,7 +24,7 @@
   } 
 </style>
 
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top dropdown">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings"><i class="fa-solid fa-compass"></i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +60,7 @@
 
 <script>
   const searchInput = document.getElementById("search-input");
+  const dropDown = document.getElementsByClassName("dropdown");
 
   function handleSize() {
     if(window.innerWidth < 768){
@@ -71,4 +72,10 @@
 
   handleSize();
   window.addEventListener("resize", handleSize);
+
+  dropdown.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+
 </script>
