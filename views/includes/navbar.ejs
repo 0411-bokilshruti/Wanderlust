@@ -57,3 +57,18 @@
     </div>
   </div>
 </nav>
+
+<script>
+  const searchInput = document.getElementById("search-input");
+
+  function handleSize() {
+    if(window.innerWidth < 768){
+      searchInput.style.display = "none";
+    } else {
+      searchInput.style.display = "block";
+    }
+  }
+
+  handleSize();
+  window.addEventListener("resize", handleSize);
+</script>
