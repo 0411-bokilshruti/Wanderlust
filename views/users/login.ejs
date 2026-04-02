@@ -1,4 +1,4 @@
-<% layout("/layouts/boilerplate") %>
+<!-- <% layout("/layouts/boilerplate") %>
 <style>
     .login{
         border: 1px solid rgb(99, 95, 95);
@@ -30,6 +30,101 @@
             
             <button class="btn btn-success">Login</button>
 
+        </form>
+    </div>
+</div> -->
+
+<% layout("/layouts/boilerplate") %>
+<style>
+    .login-wrapper {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 420px;
+        padding: 2.5rem;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        background: #fff;
+    }
+
+    .login-card h2 {
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #2d2d2d;
+    }
+
+    .login-card .form-control {
+        border-radius: 10px;
+        padding: 0.75rem 1rem;
+        border: 1px solid #ddd;
+        transition: border-color 0.3s;
+    }
+
+    .login-card .form-control:focus {
+        border-color: #198754;
+        box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.2);
+    }
+
+    .login-card .form-label {
+        font-weight: 500;
+        color: #555;
+    }
+
+    .btn-login {
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        background-color: #198754;
+        border: none;
+        color: white;
+        transition: background 0.3s;
+    }
+
+    .btn-login:hover {
+        background-color: #157347;
+    }
+
+    .signup-link {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #777;
+    }
+
+    .signup-link a {
+        color: #198754;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .signup-link a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<div class="login-wrapper">
+    <div class="login-card">
+        <h2>Welcome Back 👋</h2>
+        <form action="/login" method="POST" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input name="username" id="username" type="text" class="form-control" placeholder="Enter your username" required>
+            </div>
+            <div class="mb-4">
+                <label for="password" class="form-label">Password</label>
+                <input name="password" id="password" type="password" class="form-control" placeholder="Enter your password" required>
+            </div>
+            <button class="btn-login">Login</button>
+            <div class="signup-link">
+                Don't have an account? <a href="/signup">Sign up</a>
+            </div>
         </form>
     </div>
 </div>
