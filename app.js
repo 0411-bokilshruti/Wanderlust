@@ -87,34 +87,9 @@ app.use((req,res,next) => {
     next();
 });
 
-// app.get("/demouser", async (req,res) => {
-//     let fakeUser = new User({
-//         email: "student@gmail.com",
-//         username: "sigma-student"
-//     });
-
-//     let registeredUser = await User.register(fakeUser, "helloworld");
-//     res.send(registeredUser);
-// })
-
 app.use("/listings", listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/", userRouter);
-
-
-// app.get("/testListings",async (req,res) => {
-//     let sampleListing = new Listing({
-//         title: "My new Villa",
-//         description: "By the beach",
-//         price: 1200,
-//         location: "Calangute, Goa",
-//         country: "India"
-//     });
-
-//     await sampleListing.save();
-//     console.log("Sample was saved.");
-//     res.send("Successful testing!");
-// });
 
 app.get("/", (req,res) => {
     res.redirect("/listings");
@@ -136,14 +111,6 @@ app.use((err , req , res , next) => {
     res.status(statusCode).render("error.ejs", { message });
     // res.status(statusCode).send(message);
 }) ;
-
-// app.get("/", (req , res) => {
-//     res.send("Hi , I am root");
-// });
-
-// app.get("/" , (req,res) => {
-//     res.send("working");
-// });
 
 app.listen(8080 , () => {
     console.log("App is listening to the port 8080.");
