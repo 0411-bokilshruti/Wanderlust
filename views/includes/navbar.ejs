@@ -14,6 +14,12 @@
     padding: 0.5rem 3rem;
   }
 
+  .search-form{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   @media(max-width: 992px) {
     .navbar-collapse{
       background-color: #f8f9fa;
@@ -50,7 +56,7 @@
       </div>
 
 
-      <form class="d-flex mx-auto my-2 my-md-0" role="search">
+      <form class="d-flex mx-auto my-2 my-md-0 search-form" role="search">
         <input class="form-control me-2 search-input" type="search" placeholder="Search destinations"/>
         <button class="btn btn-search" type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
