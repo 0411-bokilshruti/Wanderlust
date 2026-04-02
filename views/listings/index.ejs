@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") %>
  
 <style>
-    #filters{
+    /* #filters{
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -20,8 +20,27 @@
 
     .filter p {
         font-size:0.8rem;
+    } */
+
+    .filter-item.active {
+        border-bottom: 2px solid black;
+        font-weight: 600;
     }
 
+    .filter-item {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 1rem;
+        opacity: 0.6;
+    }
+
+    .filter-item.active {
+        opacity: 1;
+    }
+    
     .tax-info {
         display: none;
     }
@@ -39,35 +58,59 @@
 
 
     <div id="filters">
-        <div class="filter">
+         <a href="/listings?category=Trending" class="filter-item <%= currCategory === 'Trending' ? 'active' : '' %>">
+            <i class="fa-solid fa-fire"></i>
+            <p>Trending</p>
+        </a>
+        <!-- <div class="filter">
             <div><i class="fa-solid fa-fire"></i></div>
             <p>Trending</p>
-        </div>
-
-        <div class="filter">
+        </div> -->
+ 
+        <a href="/listings?category=Rooms" class="filter-item <%= currCategory === 'Rooms' ? 'active' : '' %>">
+            <i class="fa-solid fa-bed"></i>
+            <p>Rooms</p>
+        </a>
+        <!-- <div class="filter">
             <div><i class="fa-solid fa-bed"></i></div>
             <p>Rooms</p>
-        </div>
-
-         <div class="filter">
+        </div> -->
+ 
+        <a href="/listings?category=Iconic Cities" class="filter-item <%= currCategory === 'Iconic Cities' ? 'active' : '' %>">
+            <i class="fa-solid fa-city"></i>
+            <p>Iconic Cities</p>
+        </a>
+         <!-- <div class="filter">
             <div><i class="fa-solid fa-city"></i></div>
             <p>Iconic Cities</p>
-        </div>
-
-        <div class="filter">
+        </div> -->
+           
+        <a href="/listings?category=Mountain" class="filter-item <%= currCategory === 'Mountain' ? 'active' : '' %>">
+            <i class="fa-solid fa-mountain"></i>
+            <p>Mountain</p>
+        </a>
+        <!-- <div class="filter">
             <div><i class="fa-solid fa-mountain"></i></div>
             <p>Mountain</p>
-        </div>
-
-         <div class="filter">
+        </div> -->
+ 
+        <a href="/listings?category=Amazing Pools" class="filter-item <%= currCategory === 'Amazing Pools' ? 'active' : '' %>">
+            <i class="fa-solid fa-person-swimming"></i>
+            <p>Amazing Pools</p>
+        </a>
+         <!-- <div class="filter">
             <div><i class="fa-solid fa-person-swimming"></i></i></div>
             <p>Amazing Pools</p>
-        </div>
+        </div> -->
 
-        <div class="filter">
+        <a href="/listings?category=Cabins" class="filter-item <%= currCategory === 'Cabins' ? 'active' : '' %>">
+            <i class="fa-solid fa-house-chimney"></i>
+            <p>Cabins</p>
+        </a>
+        <!-- <div class="filter">
             <div><i class="fa-solid fa-house-chimney"></i></div>
             <p>Cabins</p>
-        </div>
+        </div> -->
 <!-- 
         <div class="filter">
             <div><i class="fa-brands fa-fort-awesome"></i></div>
@@ -79,15 +122,23 @@
             <p>Camping</p>
         </div> -->
 
-        <div class="filter">
+        <a href="/listings?category=Farm" class="filter-item <%= currCategory === 'Farm' ? 'active' : '' %>">
+            <i class="fa-solid fa-cow"></i>
+            <p>Farm</p>
+        </a>
+        <!-- <div class="filter">
             <div><i class="fa-solid fa-cow"></i></div>
             <p>Farm</p>
-        </div>
+        </div> -->
 
-        <div class="filter">
+        <a href="/listings?category=Arctic" class="filter-item <%= currCategory === 'Arctic' ? 'active' : '' %>">
+            <i class="fa-solid fa-snowflake"></i>
+            <p>Arctic</p>
+        </a>
+        <!-- <div class="filter">
             <div><i class="fa-solid fa-snowflake"></i></div>
             <p>Arctic</p>
-        </div>
+        </div> -->
 
         <div class="tax-toggle">
             <div class="form-check-reverse form-switch">

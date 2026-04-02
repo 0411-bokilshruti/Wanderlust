@@ -11,6 +11,20 @@
         </div>
 
         <div class="mb-3">
+            <label class="form-label">Category</label>
+            <select name="listing[category]" class="form-select">
+                <option value="Trending">Trending</option>
+                <option value="Rooms">Rooms</option>
+                <option value="Iconic Cities">Iconic Cities</option>
+                <option value="Mountain">Mountain</option>
+                <option value="Amazing Pools">Amazing Pools</option>
+                <option value="Cabins">Cabins</option>
+                <option value="Farm">Farm</option>
+                <option value="Arctic">Arctic</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
             <label for="description" class="form-label">Description</label>
             <textarea name="listing[description]" type="text" class="form-control" required></textarea>
             <div class="invalid-feedback">Please enter a short description</div>
