@@ -5,6 +5,8 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+        margin: 5px 0 5px 0;
+        padding: 20px;
     } 
 
     /*.filter{
@@ -62,83 +64,41 @@
             <i class="fa-solid fa-fire"></i>
             <p>Trending</p>
         </a>
-        <!-- <div class="filter">
-            <div><i class="fa-solid fa-fire"></i></div>
-            <p>Trending</p>
-        </div> -->
- 
+      
         <a href="/listings?category=Rooms" class="filter-item <%= currCategory === 'Rooms' ? 'active' : '' %>">
             <i class="fa-solid fa-bed"></i>
             <p>Rooms</p>
         </a>
-        <!-- <div class="filter">
-            <div><i class="fa-solid fa-bed"></i></div>
-            <p>Rooms</p>
-        </div> -->
- 
+
         <a href="/listings?category=Iconic Cities" class="filter-item <%= currCategory === 'Iconic Cities' ? 'active' : '' %>">
             <i class="fa-solid fa-city"></i>
             <p>Iconic Cities</p>
         </a>
-         <!-- <div class="filter">
-            <div><i class="fa-solid fa-city"></i></div>
-            <p>Iconic Cities</p>
-        </div> -->
-           
+    
         <a href="/listings?category=Mountain" class="filter-item <%= currCategory === 'Mountain' ? 'active' : '' %>">
             <i class="fa-solid fa-mountain"></i>
             <p>Mountain</p>
         </a>
-        <!-- <div class="filter">
-            <div><i class="fa-solid fa-mountain"></i></div>
-            <p>Mountain</p>
-        </div> -->
- 
+
         <a href="/listings?category=Amazing Pools" class="filter-item <%= currCategory === 'Amazing Pools' ? 'active' : '' %>">
             <i class="fa-solid fa-person-swimming"></i>
             <p>Amazing Pools</p>
         </a>
-         <!-- <div class="filter">
-            <div><i class="fa-solid fa-person-swimming"></i></i></div>
-            <p>Amazing Pools</p>
-        </div> -->
 
         <a href="/listings?category=Cabins" class="filter-item <%= currCategory === 'Cabins' ? 'active' : '' %>">
             <i class="fa-solid fa-house-chimney"></i>
             <p>Cabins</p>
         </a>
-        <!-- <div class="filter">
-            <div><i class="fa-solid fa-house-chimney"></i></div>
-            <p>Cabins</p>
-        </div> -->
-<!-- 
-        <div class="filter">
-            <div><i class="fa-brands fa-fort-awesome"></i></div>
-            <p>Castles</p>
-        </div>
-
-         <div class="filter">
-            <div><i class="fa-solid fa-campground"></i></div>
-            <p>Camping</p>
-        </div> -->
 
         <a href="/listings?category=Farm" class="filter-item <%= currCategory === 'Farm' ? 'active' : '' %>">
             <i class="fa-solid fa-cow"></i>
             <p>Farm</p>
         </a>
-        <!-- <div class="filter">
-            <div><i class="fa-solid fa-cow"></i></div>
-            <p>Farm</p>
-        </div> -->
-
+ 
         <a href="/listings?category=Arctic" class="filter-item <%= currCategory === 'Arctic' ? 'active' : '' %>">
             <i class="fa-solid fa-snowflake"></i>
             <p>Arctic</p>
         </a>
-        <!-- <div class="filter">
-            <div><i class="fa-solid fa-snowflake"></i></div>
-            <p>Arctic</p>
-        </div> -->
 
         <div class="tax-toggle">
             <div class="form-check-reverse form-switch">
