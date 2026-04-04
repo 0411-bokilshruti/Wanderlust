@@ -14,16 +14,12 @@
     padding: 0.5rem 3rem;
   }
 
-  .search-form{
-    padding: 1rem;
-  }
-
   .navbar-brand-name {
     display: inline-block;
   }
 
-  /* @media(max-width: 992px) {
-    .offcanvas{
+  @media(max-width: 992px) {
+    .navbar-collapse{
       background-color: #f8f9fa;
       padding: 10px 
       15px;
@@ -32,7 +28,7 @@
       border-bottom: 1px solid white;
       border-radius: 10px 10px 10px 10px;
     }
-  } */
+  }
 </style>
 
 <nav class="navbar navbar-expand-lg bg-body-light border-bottom sticky-top">
@@ -43,17 +39,17 @@
     </a>
 
     <button class="navbar-toggler" type="button" 
-      data-bs-toggle="offcanvas" 
-      data-bs-target="#offcanvasNavbar" 
-      aria-controls="offcanvasNavbar" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarToggleExternalContent" 
+      aria-controls="navbarToggleExternalContent" 
       aria-expanded="false" 
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"  aria-labelledby="offcanvasNavbarLabel">
-      
+    <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+
       <!-- <div class="navbar-nav me-auto">
         <a class="nav-link" href="/listings">Explore</a>
       </div> -->
@@ -66,7 +62,7 @@
         </button>
       </form>
 
-      <div class="navbar-nav ms-auto offcanvas-body">
+      <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Host on Wanderlust</a>
         <% if(!currUser) { %>
           <a class="nav-link" href="/signup"><b>Sign Up</b></a>
