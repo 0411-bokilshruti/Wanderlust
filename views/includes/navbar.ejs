@@ -39,17 +39,17 @@
     </a>
 
     <button class="navbar-toggler" type="button" 
-      data-bs-toggle="collapse" 
-      data-bs-target="#navbarNavAltMarkup" 
-      aria-controls="navbarNavAltMarkup" 
+      data-bs-toggle="offcanvas" 
+      data-bs-target="#offcanvasNavbar" 
+      aria-controls="offcanvasNavbar" 
       aria-expanded="false" 
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
 
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"  aria-labelledby="offcanvasNavbarLabel">
+      
       <!-- <div class="navbar-nav me-auto">
         <a class="nav-link" href="/listings">Explore</a>
       </div> -->
@@ -62,7 +62,7 @@
         </button>
       </form>
 
-      <div class="navbar-nav ms-auto">
+      <div class="navbar-nav ms-auto offcanvas-body">
         <a class="nav-link" href="/listings/new">Host on Wanderlust</a>
         <% if(!currUser) { %>
           <a class="nav-link" href="/signup"><b>Sign Up</b></a>
