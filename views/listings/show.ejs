@@ -4,8 +4,8 @@
     const listing = <%- JSON.stringify(listing) %>;
 
 </script>
-<div class="row mt-3 container-md">
-    <div class="col-8 offset-2">
+<div class="row mt-3">
+    <div class="col-8 offset-2 box">
         <div class="card col-8 offset-3 show-card listing-card">
             <h3><%= listing.title %></h3>
             <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
@@ -38,7 +38,7 @@
     <% } %>
     
     
-    <div class="col-8 offset-md-4 mb-3">
+    <div class="col-8 offset-md-4 mb-3 box">
         
         <% if(currUser) { %>
         <hr>
@@ -100,11 +100,31 @@
         <% } %> 
     </div>
 
-    <div class="col-8 offset-md-4 mb-3">
+    <div class="col-8 offset-md-4 mb-3 box">
             <h5>Where you'll be</h5>
             <div id="map"></div>
     </div>
 </div>
 
 <script src="/js/map.js"></script>
+<script>
+    let box = document.querySelector(".box")
+    const mq = matchMedia('"max-width: 992px');
+
+    function sizeUpdate(e) {
+        if(e.matches) {
+            box.style.width = '100%';
+            box.style.margin = '0 auto';
+            box.style.padding = '0 16px';
+        } else {
+            box.style.width = "66.66%";
+            box.style.margin = "0 auto";
+            box.style.padding = "0";
+        }
+    }
+
+    sizeUpdate(mq);
+    mq.addEventListener("change", sizeUpdate);
+</script>
+
 
