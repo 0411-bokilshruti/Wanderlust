@@ -1,13 +1,6 @@
 <% layout("/layouts/boilerplate") %>
  
 <style>
-    #filter-bar{
-        display: flex;
-        align-items: center;
-        gap:12px;
-        padding: 12px 16px;
-        border-bottom: 1px solid #e0e0e0;
-    }
 
      #filters{
         display: flex;
@@ -66,7 +59,7 @@
     }
 </style>
 
-<div class="filter-bar">
+
     <div id="filters">
          <a href="/listings?category=Trending" class="filter-item <%= currCategory === 'Trending' ? 'active' : '' %>">
             <i class="fa-solid fa-fire"></i>
@@ -107,14 +100,14 @@
             <i class="fa-solid fa-snowflake"></i>
             <p>Arctic</p>
         </a>
-    </div>
+    
         <div class="tax-toggle">
             <div class="form-check-reverse form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
                 <label class="form-check-label" for="switchCheckDefault">Display Total after taxes</label>
             </div>
         </div>
-</div>
+    </div>
     
     <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ">
         <% for(let listing of allListings){ %>
