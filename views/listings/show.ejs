@@ -108,8 +108,8 @@
 
 <script src="/js/map.js"></script>
 <script>
-    let box = document.querySelector(".box")
-    const mq = matchMedia('"max-width: 992px');
+    let box = document.querySelectorAll(".box")
+    const mq = matchMedia('(max-width: 992px)');
 
     function sizeUpdate(e) {
         if(e.matches) {
