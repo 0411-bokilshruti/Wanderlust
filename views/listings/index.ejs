@@ -49,11 +49,6 @@
         align-items: center;
     }
 
-    @media(max-width: 992px){
-        #switchCheckDefault{
-            font-size: 13px;
-        }
-    }
 </style>
 
 
@@ -140,5 +135,13 @@
         }
     })
 
+    let taxLabel = document.querySelector('.tax-toggle label');
+    const mq = window.matchMedia('(max-width: 992px)');
 
+    function updateLabel(e) {
+        taxLabel.textContent = e.matches ? 'Taxes' : 'Including Tax';
+    }
+
+    updateLabel(mq);
+    mq.addEventListener('change', updateLabel);
 </script>
