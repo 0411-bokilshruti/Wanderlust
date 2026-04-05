@@ -5,8 +5,8 @@
 
 </script>
 <div class="container-fluid">
-    <div class="col-8 offset-2">
-        <div class="card col-8 offset-3 show-card listing-card">
+    <!-- <div class="col-8 offset-2"> -->
+        <div class="card show-card listing-card">
             <h3><%= listing.title %></h3>
             <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
             <div class="card-body">
@@ -23,7 +23,7 @@
                 </p>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
     <br>
 
 
@@ -38,7 +38,7 @@
     <% } %>
     
     
-    <div class="col-8 offset-md-4 mb-3">
+    <div>
         
         <% if(currUser) { %>
         <hr>
@@ -84,7 +84,7 @@
             <div class="row">
                 <p><b>All reviews</b></p>
             <% for(review of listing.reviews) { %>
-                <div class="card col-5 mb-3 ms-3">
+                <div class="card">
                     <div class="card-body mt-3">
                         <h5 class="card-title">@<%= review.author.username %></h5>
                         <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
@@ -100,7 +100,7 @@
         <% } %> 
     </div>
 
-    <div class="col-8 offset-md-4 mb-3">
+    <div>
             <h5>Where you'll be</h5>
             <div id="map"></div>
     </div>
