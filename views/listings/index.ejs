@@ -1,12 +1,20 @@
 <% layout("/layouts/boilerplate") %>
  
 <style>
+    #filter-bar{
+        display: flex;
+        align-items: center;
+        gap:12px;
+        padding: 12px 16px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
      #filters{
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         gap: 16px;
-        padding: 12px 16px;
+        flex:1;
         -webkit-overflow-scrolling:touch;
         scrollbar-width: none;
     } 
@@ -39,7 +47,7 @@
     }
 
     .tax-toggle {
-        border-left: 1px solid #e0e0e0; 
+        border: 1px solid #717171; 
         border-radius: 1rem;
         height: 3.25rem;
         padding: 1rem;
