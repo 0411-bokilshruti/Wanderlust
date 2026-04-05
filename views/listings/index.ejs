@@ -1,14 +1,13 @@
 <% layout("/layouts/boilerplate") %>
  
 <style>
-
      #filters{
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
         gap: 16px;
-        flex:1;
-        -webkit-overflow-scrolling:touch;
+        padding: 12px 16px;
+        -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
     } 
 
@@ -40,16 +39,13 @@
     }
 
     .tax-toggle {
-        border: 1px solid #717171; 
+        border: 1px solid rgba(148, 147, 147, 0.22);
         border-radius: 1rem;
         height: 3.25rem;
         padding: 1rem;
         margin-left: 3rem;
         display: flex;
         align-items: center;
-        gap: 8px;
-        flex-shrink: 0;
-        white-space: nowrap;
     }
 
     @media(max-width: 992px){
@@ -100,7 +96,7 @@
             <i class="fa-solid fa-snowflake"></i>
             <p>Arctic</p>
         </a>
-    
+
         <div class="tax-toggle">
             <div class="form-check-reverse form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
